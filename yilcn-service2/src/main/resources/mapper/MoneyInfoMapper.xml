@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yilcn.service2.mapper.MoneyInfoMapper">
+  <resultMap id="BaseResultMap" type="com.yilcn.service2.vo.MoneyInfo">
+    <result column="userId" jdbcType="VARCHAR" property="userid" />
+    <result column="money" jdbcType="DECIMAL" property="money" />
+  </resultMap>
+  <insert id="insert" parameterType="com.yilcn.service2.vo.MoneyInfo">
+    insert into moneyinfo (userId, money)
+    values (#{userid,jdbcType=VARCHAR}, #{money,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.yilcn.service2.vo.MoneyInfo">
+    insert into moneyinfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        userId,
+      </if>
+      <if test="money != null">
+        money,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="money != null">
+        #{money,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+</mapper>
