@@ -13,9 +13,13 @@ txlcn需要的：/yilcn-tm/src/main/resources/tx-manager.sql
 
 3.运行测试类yilan-service1项目里的OrderTest
 
-三、参考文档
+三、控制台地址
+txlcn 控制台地址： http://localhost:7970/admin/index.html#/ 密码codingapi
+
+四、参考文档
 http://www.txlcn.org/zh-cn/
 
 https://blog.csdn.net/weixin_42080535/article/details/90763985
 
 https://www.jianshu.com/p/3e15d20ed308
+
