@@ -1,5 +1,5 @@
 # yilcn
-spring cloud , tx lcn 5.0.2 结合的demo
+spring cloud , tx lcn 5.0.2 结合的demo,lcn 支持三种事务，目前只写了lcn事务
 
 一、sql文件
 txlcn需要的：/yilcn-tm/src/main/resources/tx-manager.sql 
